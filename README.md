@@ -1,6 +1,6 @@
 Showcase:
 
-     https://forum.cfx.re/uploads/default/original/4X/b/a/5/ba5af5ee050494f72c0c0acfd4d7123c8abe9002.jpeg
+https://forum.cfx.re/uploads/default/original/4X/b/a/5/ba5af5ee050494f72c0c0acfd4d7123c8abe9002.jpeg
 
 Example for qs-inventory:
 
