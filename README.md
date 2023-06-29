@@ -35,9 +35,7 @@ Heres an example of how you can use it:
             if not heistStarted then
                  if not requiredItemsShowed then
                      requiredItemsShowed = true
-
-
-
+                     
                      exports["v-requirements"]:ShowRequirements({
                          {
                              ["Amount"] = 1,
