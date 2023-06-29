@@ -20,5 +20,9 @@ Example for qb-inventory:
          ["Label"] = QBCore.Shared.Items["gold_ring"].label
      },
 
-Find there you want to hide the resource and add:
-exports[“v-requirements”]:HideRequirements()
+Example for qb-inventory:
+
+     exports[“v-requirements”]:HideRequirements()
+
+
+
