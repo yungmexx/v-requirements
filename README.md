@@ -20,7 +20,7 @@ Example for qb-inventory:
          ["Label"] = QBCore.Shared.Items["gold_ring"].label
      },
 
-Example for qb-inventory:
+To hide ui:
 
      exports[“v-requirements”]:HideRequirements()
 
