@@ -33,7 +33,6 @@ To hide ui:
 Heres an example of how you can use it:
 
        local QBCore = exports['qb-core']:GetCoreObject()  -- AT THE VERY TOP
-       local heistStarted = false -- AT THE VERY TOP
        local requiredItemsShowed = false  -- AT THE VERY TOP
 
 
@@ -47,7 +46,6 @@ Heres an example of how you can use it:
                if startDist <= 2.0 then
                    inRange = true
                    sleep = 1
-                   if not heistStarted then
                         if not requiredItemsShowed then
                             requiredItemsShowed = true
           
@@ -94,7 +92,6 @@ Heres an example of how you can use it:
                            },       
                       })
                    end
-              end
           else
                   if requiredItemsShowed then
                       requiredItemsShowed = false
