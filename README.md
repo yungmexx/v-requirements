@@ -32,61 +32,75 @@ To hide ui:
 
 Heres an example of how you can use it:
 
-     local startDist = #(pedCo - Config['PacificHeist']['startHeist']['pos'])
-        if startDist <= 2.0 then
-            inRange = true
-            sleep = 1
-            if not heistStarted then
-                 if not requiredItemsShowed then
-                     requiredItemsShowed = true
-                     
-                     exports["v-requirements"]:ShowRequirements({
-                         {
-                             ["Amount"] = 1,
-                             ["Image"] = "qs-inventory/html/images/big_drill.png",
-                             ["Label"] = QBCore.Shared.Items["big_drill"].label
-                         },
-                         {
-                             ["Amount"] = 1,
-                             ["Image"] = "qs-inventory/html/images/backpackprop4.png",
-                             ["Label"] = QBCore.Shared.Items["backpackprop4"].label
-                         },
-                         {
-                             ["Amount"] = 1,
-                             ["Image"] = "qs-inventory/html/images/macbookpro.png",
-                             ["Label"] = QBCore.Shared.Items["macbookpro"].label
-                         },
-                         {
-                             ["Amount"] = 4,
-                             ["Image"] = "qs-inventory/html/images/thermite.png",
-                             ["Label"] = QBCore.Shared.Items["thermite"].label
-                         },
-                         {
-                             ["Amount"] = 1,
-                             ["Image"] = "qs-inventory/html/images/pacifickeycard.png",
-                             ["Label"] = QBCore.Shared.Items["pacifickeycard"].label
-                         },
-                         {
-                             ["Amount"] = 6,
-                             ["Image"] = "qs-inventory/html/images/explosive.png",
-                             ["Label"] = QBCore.Shared.Items["explosive"].label
-                         },
-                         {
-                             ["Amount"] = 1,
-                             ["Image"] = "qs-inventory/html/images/plasma_cutter.png",
-                             ["Label"] = QBCore.Shared.Items["plasma_cutter"].label
-                         },
-                         {
-                             ["Amount"] = 1,
-                             ["Image"] = "qs-inventory/html/images/usb_red.png",
-                             ["Label"] = QBCore.Shared.Items["usb_red"].label
-                         },       
-                    })
-                 end
-            end
-        else
-                if requiredItemsShowed then
-                    requiredItemsShowed = false
-                    exports["v-requirements"]:HideRequirements()
-                end
-        end
+       local QBCore = exports['qb-core']:GetCoreObject()  -- AT THE VERY TOP
+       local heistStarted = false -- AT THE VERY TOP
+       local requiredItemsShowed = false  -- AT THE VERY TOP
+
+
+     Citizen.CreateThread(function()
+          while true do
+               local ped = PlayerPedId()
+               local pedCo = GetEntityCoords(ped)
+               local sleep = 1000
+
+               local startDist = #(pedCo - CHANGEME])  -- CHANGE ME!
+               if startDist <= 2.0 then
+                   inRange = true
+                   sleep = 1
+                   if not heistStarted then
+                        if not requiredItemsShowed then
+                            requiredItemsShowed = true
+          
+                            exports["v-requirements"]:ShowRequirements({
+                                {
+                               ["Amount"] = 1,
+                               ["Image"] = "qs-inventory/html/images/big_drill.png",
+                               ["Label"] = QBCore.Shared.Items["big_drill"].label
+                           },
+                           {
+                               ["Amount"] = 1,
+                               ["Image"] = "qs-inventory/html/images/backpackprop4.png",
+                               ["Label"] = QBCore.Shared.Items["backpackprop4"].label
+                           },
+                           {
+                               ["Amount"] = 1,
+                               ["Image"] = "qs-inventory/html/images/macbookpro.png",
+                               ["Label"] = QBCore.Shared.Items["macbookpro"].label
+                           },
+                           {
+                               ["Amount"] = 4,
+                               ["Image"] = "qs-inventory/html/images/thermite.png",
+                               ["Label"] = QBCore.Shared.Items["thermite"].label
+                           },
+                           {
+                               ["Amount"] = 1,
+                               ["Image"] = "qs-inventory/html/images/pacifickeycard.png",
+                               ["Label"] = QBCore.Shared.Items["pacifickeycard"].label
+                           },
+                           {
+                               ["Amount"] = 6,
+                               ["Image"] = "qs-inventory/html/images/explosive.png",
+                               ["Label"] = QBCore.Shared.Items["explosive"].label
+                           },
+                           {
+                               ["Amount"] = 1,
+                               ["Image"] = "qs-inventory/html/images/plasma_cutter.png",
+                               ["Label"] = QBCore.Shared.Items["plasma_cutter"].label
+                           },
+                           {
+                               ["Amount"] = 1,
+                               ["Image"] = "qs-inventory/html/images/usb_red.png",
+                               ["Label"] = QBCore.Shared.Items["usb_red"].label
+                           },       
+                      })
+                   end
+              end
+          else
+                  if requiredItemsShowed then
+                      requiredItemsShowed = false
+                      exports["v-requirements"]:HideRequirements()
+                  end
+          end
+              Citizen.Wait(sleep)
+          end
+     end)
