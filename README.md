@@ -1,3 +1,7 @@
+Original Post (updated)
+
+https://forum.cfx.re/t/free-rl-requirements/5119362
+
 Showcase:
 
 https://forum.cfx.re/uploads/default/original/4X/b/a/5/ba5af5ee050494f72c0c0acfd4d7123c8abe9002.jpeg
