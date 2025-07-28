@@ -52,8 +52,8 @@ Heres an example of how you can use it:
                    sleep = 1
                         if not requiredItemsShowed then
                             requiredItemsShowed = true
-          
-                            exports["v-requirements"]:ShowRequirements({
+                            local title = "Required Items"
+                            exports["v-requirements"]:ShowRequirements(title{
                                 {
                                ["Amount"] = 1,
                                ["Image"] = "qs-inventory/html/images/big_drill.png",
