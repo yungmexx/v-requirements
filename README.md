@@ -4,7 +4,8 @@ https://forum.cfx.re/t/free-rl-requirements/5119362
 
 Showcase:
 
-<img width="1430" height="945" alt="{FF5623A6-83A7-47B8-B403-56F74001AD0F}" src="https://github.com/user-attachments/assets/0c077610-f935-47f9-af97-e645a0369412" />
+<img width="1920" height="1033" alt="{60B7E6EC-80C1-474F-8A17-57F75ED5037F}" src="https://github.com/user-attachments/assets/eaf135f2-2e05-453e-9e5b-0a94f03b5924" />
+
 
 
 Example for qs-inventory:
