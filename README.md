@@ -36,8 +36,8 @@ To hide ui:
 
 Heres an example of how you can use it:
 
-       local QBCore = exports['qb-core']:GetCoreObject()  -- AT THE VERY TOP
-       local requiredItemsShowed = false  -- AT THE VERY TOP
+       local QBCore = exports['qb-core']:GetCoreObject()
+       local requiredItemsShowed = false
 
 
      Citizen.CreateThread(function()
