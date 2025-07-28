@@ -1,6 +1,4 @@
-Original Post (updated)
 
-https://forum.cfx.re/t/free-rl-requirements/5119362
 
 Showcase:
 
